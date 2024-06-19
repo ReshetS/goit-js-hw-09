@@ -1,0 +1,131 @@
+/**
+  |============================
+  | include css partials with
+  | default @import url()
+  |============================
+*/
+@import url('https://cdn.jsdelivr.net/npm/modern-normalize/modern-normalize.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400..500&display=swap');
+
+:root {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  font-weight: 400;
+
+  color: #2e2f42;
+  background-color: rgba(255, 255, 255, 0.87);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 8px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.gallery {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  width: 1440px;
+  padding: 24px 156px;
+}
+
+.gallery-item {
+  flex-basis: 360px;
+  height: 200px;
+}
+
+.gallery-image {
+  width: 360px;
+  height: 200px;
+  object-fit: cover;
+  transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gallery-image:hover {
+  scale: 1.04;
+}
+
+.sl-overlay {
+  background-color: rgba(46, 47, 66) !important;
+}
+
+.feedback-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 408px;
+  padding: 24px;
+  background-color: #ffffff;
+  border: 1px dotted #808080;
+  border-radius: 8px;
+}
+
+.feedback-form label {
+  display: block;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  display: block;
+  margin: 8px 0;
+  padding: 8px 16px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 360px;
+}
+
+.feedback-form input {
+  height: 40px;
+}
+.feedback-form textarea {
+  height: 80px;
+  resize: none;
+}
+
+.feedback-form input:hover,
+.feedback-form input:focus,
+.feedback-form textarea:hover,
+.feedback-form textarea:focus {
+  border: 1px solid #000000;
+  outline: none;
+}
+
+.feedback-form button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px;
+  padding: 8px 16px;
+  width: 95px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: #4e75ff;
+  border: none;
+
+  color: #ffffff;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+.feedback-form button:hover,
+.feedback-form button:focus {
+  background-color: #6c8cff;
+}
